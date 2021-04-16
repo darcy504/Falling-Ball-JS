@@ -29,18 +29,21 @@ document.addEventListener("keydown", event => {
             interval = setInterval(moveRight, 1);
         }
     }
-})
+});
 
 document.addEventListener("keyup", event => {
     clearInterval(interval);
     both=0;
-})
-
-var block = document.createElement("div");
-var hole = document.createElement("div");
-block.setAttribute("class", "block");
-hole.setAttribute("class", "hole");
-block.setAttribute("id", "block");
-hole.setAttribute("id", "hole");
-game.appendChild(block);
-game.appendChild(hole);
+});
+setInterval(function(){
+    var block = document.createElement("div");
+    var hole = document.createElement("div");
+    block.setAttribute("class", "block");
+    hole.setAttribute("class", "hole");
+    block.setAttribute("id", "block");
+    hole.setAttribute("id", "hole");
+    var random = Math.floor(Math.random() * 360);
+    hole.style.left = random + "px";
+    game.appendChild(block);
+    game.appendChild(hole);
+},1);
