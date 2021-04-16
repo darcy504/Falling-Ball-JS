@@ -2,6 +2,7 @@ var character = document.getElementById("character");
 var game = document.getElementById("game");
 var interval;
 var both = 0;
+var counter = 0;
 
 function moveLeft() {
     var left = 
@@ -46,4 +47,5 @@ setInterval(function(){
     hole.style.left = random + "px";
     game.appendChild(block);
     game.appendChild(hole);
+    counter ++;
 },1);
