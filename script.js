@@ -37,12 +37,14 @@ document.addEventListener("keyup", event => {
     both=0;
 });
 setInterval(function(){
+    var blockLast = document.getElementById("block"+(counter-1));
+    var holeLast = document.getElementById("hole"+(counter-1));
     var block = document.createElement("div");
     var hole = document.createElement("div");
     block.setAttribute("class", "block");
     hole.setAttribute("class", "hole");
-    block.setAttribute("id", "block");
-    hole.setAttribute("id", "hole");
+    block.setAttribute("id", "block"+counter);
+    hole.setAttribute("id", "hole"+counter);
     var random = Math.floor(Math.random() * 360);
     hole.style.left = random + "px";
     game.appendChild(block);
