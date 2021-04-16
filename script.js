@@ -51,6 +51,8 @@ setInterval(function(){
     hole.setAttribute("class", "hole");
     block.setAttribute("id", "block"+counter);
     hole.setAttribute("id", "hole"+counter);
+    block.style.top = blockLastTop + 100 + "px";
+    hole.style.top = holeLastTop + 100 + "px";
     var random = Math.floor(Math.random() * 360);
     hole.style.left = random + "px";
     game.appendChild(block);
